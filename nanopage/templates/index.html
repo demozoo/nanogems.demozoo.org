@@ -46,8 +46,8 @@
 <div class="l-content">
     
     {% for category in config.CATEGORIES %}
-    
-    <div id="{{category.id}}" class="sticky banner-mini">
+    <label id="{{category.id}}"></label>
+    <div  class="sticky banner-mini">
         <h1 class="banner-mini-head">
             {{category.label|title}} 
         </h1>
