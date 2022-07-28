@@ -43,6 +43,10 @@ jobs:
       - name: Generate
         run: |
           python nanopage generate
+      - name: Update image cache
+        run: |
+          # Only commit and push if there are staged changes.
+          git diff --staged --quiet || git commit -m "Update image cache" && git push origin main
       - name: Save commit hash to file
         # Provide a change in case regeneration didn't change any files
         # so upcoming Git commands `add` and `commit` succeed.
