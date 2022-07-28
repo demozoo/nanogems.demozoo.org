@@ -47,7 +47,7 @@ def _generate_page(entries: list) -> None:
             flavor["id"]: [] for flavor in config.FLAVORS
         }
 
-    entries.sort(key=lambda a:a['release_date'])
+    entries.sort(key=lambda a:a['release_date'], reverse=True)
     og_entries= entries[:5]
     for entry in entries:
         organized_entries[entry["category"]][entry["flavor"]].append(entry)
