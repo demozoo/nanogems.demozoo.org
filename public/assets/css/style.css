@@ -24,10 +24,16 @@
     line-height: 1.6em;
   }
   
-  .sticky {
+  .sticky  {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+  }
+
+  .sticky.banner-mini {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
   }
   /*
    * -- Layout Styles --
