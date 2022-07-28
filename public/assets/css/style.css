@@ -2,6 +2,10 @@
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
  */
+ html{
+  scroll-behavior: smooth;
+ }
+
  body {
     color: #c6c6c6;
     background-color: #1a1a1a;
@@ -20,6 +24,11 @@
     line-height: 1.6em;
   }
   
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
   /*
    * -- Layout Styles --
    */
@@ -84,8 +93,15 @@
    .banner h2{
     font-size: 1.5em;;
   }
-
+  #nav {
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 0px;
+    text-align: center;
+  }
    .banner-mini {
+    scroll-margin-top: 50px;
+    margin-top: 10px;
     background: transparent
       url("/img/header.png")
       0 0 no-repeat fixed;

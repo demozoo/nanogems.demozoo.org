@@ -3,11 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A layout example that shows off a responsive pricing table.">
+    <meta name="description" content="A curated selection of the best tiny intros from the demoscene">
     <title>Nano Gems : A curated selection of the best tiny intros from the demoscene</title>
     <link rel="stylesheet" href="./assets/css/pure-min.css">
     <link rel="stylesheet" href="./assets/css/grids-responsive-min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- <meta property="og:image" content="https://livecode.demozoo.org/media/{{img_header_path}}" />
+    <meta property="og:image:secure_url" content="https://livecode.demozoo.org/media/{{img_header_path}}" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" /> -->
 </head>
 <body>
 
@@ -18,30 +24,33 @@
     </ul>
 </div> 
 
-<div class="banner">
-    <h1 class="banner-head">
+<div id="top" class="banner">
+    <h1  class="banner-head">
         NANO GEMS 
     </h1>
     <h2 class="banner-head">A curated selection of the best Tiny Intros from the Demoscene</h2>
-    <div class="pure-button-group pure-u-1" role="group" aria-label="...">
+    
+</div>
+<div id="nav" class=" l-box pure-g center sticky">
+   
+    <div  class="pure-button-group pure-u-1" role="group" aria-label="...">
+         <a class="button-secondary pure-button" href="#top">Top Page</a>
         {% for category in config.CATEGORIES %}
         <a class="button-secondary pure-button " href="#{{category.id}}">{{category.label}}</a>
         
         {%  endfor %}
         <a class="button-secondary pure-button" href="#about">About</a>
+        
     </div>
 </div>
-
-
 <div class="l-content">
     
     {% for category in config.CATEGORIES %}
     
     <div id="{{category.id}}" class="banner-mini">
         <h1 class="banner-mini-head">
-            {{category.label|title}}
+            {{category.label|title}} 
         </h1>
-    
     </div>
         <div class="category-tables pure-g">
             {% for flavor in config.FLAVORS %}
