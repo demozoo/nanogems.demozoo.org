@@ -47,13 +47,15 @@ def _generate_page(entries: list) -> None:
             flavor["id"]: [] for flavor in config.FLAVORS
         }
 
+    entries.sort(key=lambda a:a['release_date'])
+    og_entries= entries[:5]
     for entry in entries:
         organized_entries[entry["category"]][entry["flavor"]].append(entry)
 
     template_loader = jinja2.FileSystemLoader(searchpath="./nanopage/templates")
     template_env = jinja2.Environment(loader=template_loader)
     template = template_env.get_template("index.html")
-    page_html = template.render(organized_entries=organized_entries, config=config)
+    page_html = template.render(organized_entries=organized_entries, config=config,og_entries=og_entries)
     page_html = minify_html.minify(
         page_html, minify_js=True, remove_processing_instructions=True
     )
