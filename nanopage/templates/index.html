@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive pricing table.">
+    <title>Nano Gems : A curated selection of the best tiny intros from the demoscene</title>
+    <link rel="stylesheet" href="/assets/css/pure-min.css">
+    <link rel="stylesheet" href="/assets/css/grids-responsive-min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<div class="pure-menu pure-menu-horizontal">
+    <a href="#" class="pure-menu-heading"><img src="/img/logo.png"/></a>
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+    </ul>
+</div> 
+
+<div class="banner">
+    <h1 class="banner-head">
+        NANO GEMS 
+    </h1>
+    <h2 class="banner-head">A curated selection of the best Tiny Intros from the Demoscene</h2>
+    <div class="pure-button-group pure-u-1" role="group" aria-label="...">
+        {% for category in config.CATEGORIES %}
+        <a class="button-secondary pure-button " href="#{{category.id}}">{{category.label}}</a>
+        
+        {%  endfor %}
+        <a class="button-secondary pure-button" href="#about">About</a>
+    </div>
+</div>
+
+
+<div class="l-content">
+    
+    {% for category in config.CATEGORIES %}
+    
+    <div id="{{category.id}}" class="banner-mini">
+        <h1 class="banner-mini-head">
+            {{category.label|title}}
+        </h1>
+    
+    </div>
+        <div class="category-tables pure-g">
+            {% for flavor in config.FLAVORS %}
+            <div class="pure-u-1 pure-u-md-1-3">
+                <div class="category-table category-table-{{flavor.id}}">
+                    <div class="category-table-header">
+                        <h2>{{flavor.label}}</h2>
+                    </div>
+    
+                    <ul class="category-table-list">
+                        {% for entry in organized_entries[category.id][flavor.id]|sort(attribute='release_date',reverse = True)%}
+                        <li> 
+                            
+                            <a target="_blank" href="{{entry.demozoo_url}}"> <img  loading="lazy" src="/img/thumbnails/{{entry.thumbnail_website}}"/></a>
+                            <p class="entry-label"> <a target="_blank" href="{{entry.demozoo_url}}"> {{entry.title}} by {{entry.authors}} <br/>
+                            ({{entry.platforms}} - {{entry.release_date[0:4]}}) 
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+    
+                   
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+    {% endfor %}
+  
+    <div class="information pure-g center" id="about">
+        <div class="pure-u-1">
+            <div class="l-box">
+                <h3 class="information-head">ABOUT NANO GEMS</h3>
+                    <p>
+                        Nanogems is a curated selection of the best tiny intros from <a href="https://wikiless.org/wiki/Demoscene?lang=en">the demoscene</a>. 
+                    </p>
+                    <p>
+                        It is designed to give a quick overview of what kind of tiny intros are out there in different size categories and platforms.
+                    </p>
+                    <p>
+                    Intros are in no particular order and are curated and suggestion by the members of the <a href="https://discord.gg/pZE5rAQrHx">Sizecoding Discord</a>.  
+                    </p>
+                    <p>
+                        Do you have a gem that is missing? Let us know and we might include it.  
+                    </p>
+                   
+            </div>
+        </div>
+
+        <div class="pure-u-1">
+            <div class="l-box">
+                <h3 class="information-head">ABOUT TINY INTROS AND SIZECODING</h3>
+                <p>
+                    
+
+                Sizecoding is the art of creating very tiny (usually graphical demonstration) programs for a wide range of Platforms/CPUs. In other scenes this artform is sometimes also known as #generative #codeart #proceduralart #generativeart #codegolfing #codegolf #tweetcart #dwitter and #tweetjam
+            </p>
+            <p>
+                By "very tiny programs", we mean programs that are anywhere from 8 and 16 bytes upwards to 1024 bytes (or 1k). Anything below 256 bytes is sometimes also called tiny intros, the most popular size category is 256 bytes.
+            </p>
+            <p>
+                There are also competitions for bigger intros like 512 bytes , 1k and 4k, 16k and some cases even 64k in size, typically created by members of the demoscene as a show of programming skill.
+            </p>
+            <p>
+                The size of these tiny programs is measured by their total size in opcode bytes, and are usually presented as executable binary.
+            </p>
+            <p>
+For more information check out <a href="http://www.sizecoding.org/">http://www.sizecoding.org/</a> .
+
+                </p>
+            </div>
+        </div>
+
+        <div class="pure-u-1">
+            <div class="l-box">
+                <h3 class="information-head">LINKS</h3>
+                <p>
+                    
+
+                Here are some links to other demoscene rseources:
+                    <ul>
+                   <li><a href="https://demozoo.org/">Demozoo: The most complete demoscene database out there</a></li>
+
+                   <li><a href="https://www.pouet.net/">Pouet: Your online demoscene resource</a></li>
+
+                   <li><a href="https://www.demoparty.net/">Demoparty.net: An overview of all upcoming demoscene parties</a></li>
+
+                   <li><a href="https://livecode.demozoo.org/">Demozoo Livecode events: Everything related to live shader coding</a></li>
+
+                   <li><a href="https://curio.scene.org/">Curio: Curated demoscene productions</a></li>
+
+                   <li><a href="https://www.youtube.com/watch?v=t0Jszj8WNas&list=PLjxyPjW-DeNVnrA1TDZ_S7IG3PS9UE-yo">psenough's montly demoscene reports</a></li>
+                    
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+    
+    </div> <!-- end information -->
+</div> <!-- end l-content -->
+
+<div class="footer l-box">
+    <p>
+        <a href="/">Nanogems</a>.
+    </p>
+</div>
+
+</body>
+</html>

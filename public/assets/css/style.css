@@ -1,0 +1,268 @@
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+ body {
+    color: #c6c6c6;
+    background-color: #1a1a1a;
+  }
+  
+  h2,
+  h3 {
+    letter-spacing: 0.1em;
+    font-weight: normal;
+  }
+  h1 {
+    color:#FFF;
+    text-transform: uppercase;
+  }
+  p {
+    line-height: 1.6em;
+  }
+  
+  /*
+   * -- Layout Styles --
+   */
+  .l-content {
+    margin: 0 auto;
+  }
+  a {
+    color:rgb(156, 226, 251);
+  }
+  .l-box {
+    padding: 0.5em 2em;
+  }
+  .center {
+    justify-content: center;
+  }
+  /*
+   * -- MENU STYLES --
+   * Make the menu have a very faint box-shadow.
+   */
+  .pure-menu {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pure-menu-link {
+    padding: 0.5em 0.7em;
+  }
+  
+  /*
+   * -- BANNER --
+   * The top banner with the headings. By using a combination
+   * of `display: table;` and `display: table-cell;`, we can
+   * vertically center the text.
+   */
+  
+  .banner {
+    background: transparent
+      url("/img/header.png")
+      0 0 no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/header.png', sizingMethod='scale');
+  
+    height: 100px;
+    width: 100%;
+    margin-bottom: 3em;
+    display: table;
+  }
+  
+  .banner-head {
+    display: block;
+    margin-bottom: 0;
+    font-size: 2em;
+    color: white;
+    padding: 10px;
+    font-weight: 500;
+    text-shadow: 0 1px 1px rgb(45, 45, 45);
+    background-color: #111111BB;
+  }
+  .banner h1 {
+    font-size: 5.5em;;
+  }
+   .banner h2{
+    font-size: 1.5em;;
+  }
+
+   .banner-mini {
+    background: transparent
+      url("/img/header.png")
+      0 0 no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+   margin: 0 auto;
+    height: 100px;
+    width: 80%;
+    margin-bottom: 2em;
+    display: table;
+  }
+   .banner-mini-head {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 2em;
+    color: white;
+    font-weight: 500;
+    margin: 0 auto;
+    text-shadow: 0 3px 3px rgb(22, 22, 22);
+   
+  }
+
+
+  .category-tables,
+  .information {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+.information {
+    text-align: justify;
+    font-size: 1.3em;
+}
+.information ul{
+    text-align: left;
+}
+  .pricing-tables {
+    margin-bottom: 3.125em;
+    text-align: center;
+  }
+  
+
+  .category-table {
+    border:0px;
+    margin: 0 0.5em 1em;
+  }
+  
+
+  .category-table-fantasy .category-table-header {
+    background: #85fb85;
+  }
+  
+  .category-table-highend .category-table-header {
+    background: #f27aff;
+  }
+
+  .category-table-oldschool .category-table-header {
+    background: #8fe7ff;
+  }
+  
+
+  .category-table-header {
+    background: #111;
+    color: #1f1f1f;
+    max-height: 5em;
+    text-align: center;
+  }
+  .category-table-header h2 {
+    margin: 0;
+    padding: 25px;
+    font-size: 1.7em;
+    font-weight:bolder;
+    letter-spacing: -2px;
+  }
+  
+ 
+  
+
+  .category-table-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+
+  .category-table-list li {
+    padding: 0.8em 0;
+    background: #171717;
+    color:rgb(87, 204, 248);
+    border:0px;
+    min-height: 9.5em;
+    max-height: 9.5em;
+    letter-spacing: -1px;;
+    transition: width .25s, height .25s,min-height .25s, max-height .25s;
+  }
+
+  .category-table-list li:hover {
+    padding: 0.8em 0;
+    background: #171717;
+    color:rgb(87, 204, 248);
+    border:0px;
+    min-height: 20em;
+    max-height: 20em;
+  }
+  .category-table-list img {
+    height: 75px;
+    width: 60%;
+    transition-timing-function: ease;
+    object-fit: cover; 
+    transition: width .25s, height .25s,min-height .25s, max-height .25s;
+  }
+  
+  .category-table-list li:hover img{
+    height: 200px;
+    width: 100%;
+  }
+
+  .button-choose {
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    border-radius: 2em;
+    font-weight: bold;
+    position: relative;
+    bottom: -1.5em;
+  }
+  
+  .information-head {
+    color: #eeeeee;
+    font-weight: bolder;
+
+  }
+  
+  .footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+  }
+  .footer a {
+    color: #ddd;
+  }
+  
+  /*
+   * -- TABLET MEDIA QUERIES --
+   * On tablets, we want to slightly adjust the size of the banner
+   * text and add some vertical space between the various pricing tables
+   */
+  @media (min-width: 767px) {
+    .banner-head {
+      font-size: 4em;
+    }
+    .pricing-table {
+      margin-bottom: 0;
+    }
+  }
+  
+  /*
+   * -- PHONE MEDIA QUERIES --
+   * On phones, we want to reduce the height and font-size of the banner further
+   */
+  @media (min-width: 480px) {
+    .banner {
+      height: 400px;
+    }
+    .banner-head {
+      font-size: 3em;
+    }
+  }
+  
+
+.button-secondary {
+  border-radius: 14px;
+  text-shadow: 2 2px 2px #111;
+   background-color: rgb(1, 115, 180);
+  color: #eeeeee;
+  font-size: 110%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
