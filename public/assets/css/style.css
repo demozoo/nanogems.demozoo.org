@@ -4,16 +4,16 @@
  */
  @font-face {
   font-family: Zector;
-  src: url("/assets/css/font/Zector.otf") format("opentype");
+  src: url("https://blog.totetmatt.fr/nanogems.demozoo.org/assets/css/font/Zector.otf") format("opentype");
 }
 @font-face {
   font-family: Cuyabra;
   font-weight: bold;
-  src: url("/assets/css/font/cuyabra bold.otf") format("opentype");
+  src: url("https://blog.totetmatt.fr/nanogems.demozoo.org/assets/css/font/cuyabra bold.otf") format("opentype");
 }
 @font-face {
   font-family: Cuyabra;
-  src: url("/assets/css/font/cuyabra.otf") format("opentype");
+  src: url("https://blog.totetmatt.fr/nanogems.demozoo.org/assets/css/font/cuyabra.otf") format("opentype");
 }
  html{
   scroll-behavior: smooth;
