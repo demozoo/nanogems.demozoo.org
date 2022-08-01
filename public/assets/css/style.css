@@ -2,8 +2,23 @@
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
  */
+ @font-face {
+  font-family: Zector;
+  src: url("/assets/css/font/Zector.otf") format("opentype");
+}
+@font-face {
+  font-family: Cuyabra;
+  font-weight: bold;
+  src: url("/assets/css/font/cuyabra bold.otf") format("opentype");
+}
+@font-face {
+  font-family: Cuyabra;
+  src: url("/assets/css/font/cuyabra.otf") format("opentype");
+}
  html{
   scroll-behavior: smooth;
+  font-family: Cuyabra;
+  
  }
 
  body {
@@ -14,7 +29,7 @@
   h2,
   h3 {
     letter-spacing: 0.1em;
-    font-weight: normal;
+    font-weight: bold;
   }
   h1 {
     color:#FFF;
@@ -104,6 +119,8 @@
   margin-bottom: 10px;
   padding: 0px;
     text-align: center;
+   
+    font-weight: lighter;
   }
    .banner-mini {
     scroll-margin-top: 50px;
@@ -136,13 +153,14 @@
   .information {
     max-width: 1000px;
     margin: 0 auto;
+   
   }
 .information {
-    text-align: justify;
+  text-align: center;
     font-size: 1.3em;
 }
 .information ul{
-    text-align: left;
+    text-align: center;
 }
   .pricing-tables {
     margin-bottom: 3.125em;
@@ -172,13 +190,14 @@
   .category-table-header {
     background: #111;
     color: #1f1f1f;
-    max-height: 5em;
+    max-height: 3em;
     text-align: center;
+    font-family: Zector;
   }
   .category-table-header h2 {
     margin: 0;
-    padding: 25px;
-    font-size: 1.7em;
+    padding: 10px;
+    font-size: 1.8em;
     font-weight:bolder;
     letter-spacing: -2px;
   }
@@ -203,6 +222,7 @@
     max-height: 9.5em;
     letter-spacing: -1px;;
     transition: width .25s, height .25s,min-height .25s, max-height .25s;
+    font-family: Zector;
   }
 
   .category-table-list li:hover {
@@ -212,6 +232,7 @@
     border:0px;
     min-height: 20em;
     max-height: 20em;
+    
   }
   .category-table-list img {
     height: 75px;
@@ -284,7 +305,8 @@
   text-shadow: 2 2px 2px #111;
    background-color: rgb(1, 115, 180);
   color: #eeeeee;
-  font-size: 110%;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
+  font-size: 100%;
+  font-family: Zector;
+
+  letter-spacing: -4px;
 }

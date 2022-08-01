@@ -23,14 +23,15 @@ FLAVORS = [
 
 # Order in list is Order displayed (top to bottom)
 CATEGORIES = [
-    {"id": "1024_byte_intros", "label": "1024 Byte intros"},
-    {"id": "512_byte_intros", "label": "512 Byte intros"},
-    {"id": "256_byte_intros", "label": "256 Byte intros"},
-    {"id": "128_byte_intros", "label": "128 Byte intros"},
-    {"id": "64_byte_intros", "label": "64 Byte intros"},
-    {"id": "32_byte_intros", "label": "32 Byte intros"},
-    {"id": "16_byte_intros", "label": "16 Byte intros"},
-    {"id": "8_byte_intros", "label": "8 Byte intros"},
+    {"id": "1024_byte_intros", "label": "1024B intros"},
+    {"id": "512_byte_intros", "label": "512B intros"},
+    {"id": "256_byte_intros", "label": "256B intros"},
+    {"id": "128_byte_intros", "label": "128B intros"},
+    {"id": "64_byte_intros", "label": "64B intros"},
+    {"id": "32_byte_intros", "label": "32B intros"},
+    {"id": "16_byte_intros", "label": "16B intros"},
+    {"id": "8_byte_intros", "label": "8B intros"},
+    {"id": "tweet", "label": "Tweet"},
     {"id": "tiny_executable_graphics", "label": "Tiny executable graphics"},
 ]
 
