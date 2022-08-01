@@ -4,16 +4,16 @@
  */
  @font-face {
   font-family: Zector;
-  src: url("https://blog.totetmatt.fr/nanogems.demozoo.org/assets/css/font/Zector.otf") format("opentype");
+  src: url("/assets/css/font/Zector.otf") format("opentype");
 }
 @font-face {
   font-family: Cuyabra;
   font-weight: bold;
-  src: url("https://blog.totetmatt.fr/nanogems.demozoo.org/assets/css/font/cuyabra bold.otf") format("opentype");
+  src: url("/assets/css/font/cuyabra bold.otf") format("opentype");
 }
 @font-face {
   font-family: Cuyabra;
-  src: url("https://blog.totetmatt.fr/nanogems.demozoo.org/assets/css/font/cuyabra.otf") format("opentype");
+  src: url("/assets/css/font/cuyabra.otf") format("opentype");
 }
  html{
   scroll-behavior: smooth;
@@ -87,11 +87,11 @@
   
   .banner {
     background: transparent
-      url("https://blog.totetmatt.fr/nanogems.demozoo.org/img/header.png")
+      url("/nanogems.demozoo.org/img/header.png")
       0 0 no-repeat fixed;
     text-align: center;
     background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blog.totetmatt.fr/nanogems.demozoo.org/img/header.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/nanogems.demozoo.org/img/header.png', sizingMethod='scale');
   
     height: 100px;
     width: 100%;
@@ -127,7 +127,7 @@
     scroll-margin-top: 50px;
     margin-top: 10px;
     background: transparent
-      url("https://blog.totetmatt.fr/nanogems.demozoo.org/img/header.png")
+      url("/nanogems.demozoo.org/img/header.png")
       0 0 no-repeat fixed;
     text-align: center;
     background-size: cover;
