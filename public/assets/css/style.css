@@ -131,7 +131,7 @@
       0 0 no-repeat fixed;
     text-align: center;
     background-size: cover;
-   margin: 0 auto;
+    margin: 0 auto;
     height: 100px;
     width: 80%;
     margin-bottom: 2em;
@@ -194,14 +194,16 @@
     color: #1f1f1f;
     max-height: 3em;
     text-align: center;
-    font-family: Zector;
+    font-family: Cuyabra;
+    font-weight:bolder;
+    padding: 1px;
   }
   .category-table-header h2 {
     margin: 0;
-    padding: 10px;
-    font-size: 1.8em;
+    
+    font-size: 2.1em;
     font-weight:bolder;
-    letter-spacing: -2px;
+    letter-spacing: -4px;
   }
   
  
