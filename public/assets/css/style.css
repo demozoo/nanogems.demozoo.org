@@ -87,11 +87,11 @@
   
   .banner {
     background: transparent
-      url("/nanogems.demozoo.org/img/header.png")
+      url("/img/header.png")
       0 0 no-repeat fixed;
     text-align: center;
     background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/nanogems.demozoo.org/img/header.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/header.png', sizingMethod='scale');
   
     height: 100px;
     width: 100%;
@@ -127,7 +127,7 @@
     scroll-margin-top: 50px;
     margin-top: 10px;
     background: transparent
-      url("/nanogems.demozoo.org/img/header.png")
+      url("/img/header.png")
       0 0 no-repeat fixed;
     text-align: center;
     background-size: cover;
