@@ -30,7 +30,7 @@ def data_from_demozoo(pid: str) -> dict:
         "platforms": ",".join([d["name"] for d in data["platforms"]]),
         "release_date": data["release_date"],
         "thumbnail": thumbnail or None,
-        "demozoo_url": data["demozoo_url"],
+        "url": data["demozoo_url"],
         "download_link": download_link or None,
         "other_links": data["external_links"],
     }

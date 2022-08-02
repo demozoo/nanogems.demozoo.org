@@ -69,8 +69,8 @@
                         {% for entry in organized_entries[category.id][flavor.id]|sort(attribute='release_date',reverse = True)%}
                         <li> 
                             
-                            <a target="_blank" href="{{entry.demozoo_url}}"> <img  loading="lazy" src="./img/thumbnails/{{entry.thumbnail_website}}"/></a>
-                            <p class="entry-label"> <a target="_blank" href="{{entry.demozoo_url}}"> {{entry.title}} by {{entry.authors}} <br/>
+                            <a target="_blank" href="{{entry.url}}"> <img  loading="lazy" src="./img/thumbnails/{{entry.thumbnail_website}}"/></a>
+                            <p class="entry-label"> <a target="_blank" href="{{entry.url}}"> {{entry.title}} by {{entry.authors}} <br/>
                             ({{entry.platforms}} - {{entry.release_date[0:4]}}) 
                             </a>
                         </li>
