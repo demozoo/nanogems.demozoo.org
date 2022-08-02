@@ -56,5 +56,6 @@ jobs:
 
       - run: |
           git add -A
+          git add -f public/index.html
           git commit -m "Publish"
           git push -f origin `git subtree split -P public`:refs/heads/gh-pages
