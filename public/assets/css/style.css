@@ -7,6 +7,10 @@
   src: url("/assets/css/font/Zector.otf") format("opentype");
 }
 @font-face {
+  font-family: Bebas;
+  src: url("/assets/css/font/BebasNeue Regular.otf") format("opentype");
+}
+@font-face {
   font-family: Cuyabra;
   font-weight: bold;
   src: url("/assets/css/font/cuyabra bold.otf") format("opentype");
@@ -17,7 +21,7 @@
 }
  html{
   scroll-behavior: smooth;
-  font-family: Cuyabra;
+  font-family: Bebas;
   
  }
 
@@ -224,10 +228,12 @@
     border:0px;
     min-height: 9.5em;
     max-height: 9.5em;
-    letter-spacing: -1px;;
+    letter-spacing: -0px;;
     transition: width .25s, height .25s,min-height .25s, max-height .25s;
-    font-family: Zector;
+    font-family: Bebas;
+   
   }
+ 
 
   .category-table-list li:hover {
     padding: 0.8em 0;
@@ -310,7 +316,8 @@
    background-color: rgb(1, 115, 180);
   color: #eeeeee;
   font-size: 100%;
-  font-family: Zector;
+  font-family: Cuyabra;
 
-  letter-spacing: -4px;
+
 }
+
