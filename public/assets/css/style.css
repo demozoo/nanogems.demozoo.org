@@ -198,7 +198,7 @@
     color: #1f1f1f;
     max-height: 3em;
     text-align: center;
-    font-family: Cuyabra;
+    font-family: Bebas;
     font-weight:bolder;
     padding: 1px;
   }
@@ -207,7 +207,7 @@
     
     font-size: 2.1em;
     font-weight:bolder;
-    letter-spacing: -4px;
+    letter-spacing: -1px;
   }
   
  
@@ -310,14 +310,15 @@
   }
   
 
-.button-secondary {
+a.button-secondary {
   border-radius: 14px;
   text-shadow: 2 2px 2px #111;
    background-color: rgb(1, 115, 180);
   color: #eeeeee;
   font-size: 100%;
-  font-family: Cuyabra;
-
+ 
+  font-family: Bebas;
+  letter-spacing: 50px;
 
 }
 
