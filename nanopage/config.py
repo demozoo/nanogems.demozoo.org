@@ -31,7 +31,6 @@ CATEGORIES = [
     {"id": "32_byte_intros", "label": "32B intros"},
     {"id": "16_byte_intros", "label": "16B intros"},
     {"id": "8_byte_intros", "label": "8B intros"},
-    {"id": "tweet", "label": "Tweets"},
     {"id": "tiny_executable_graphics", "label": "Tiny executable graphics"},
 ]
 

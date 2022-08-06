@@ -50,7 +50,8 @@ def _generate_page(entries: list) -> None:
     entries.sort(key=lambda a:a['release_date'], reverse=True)
     og_entries= entries[:5]
     for entry in entries:
-        organized_entries[entry["category"]][entry["flavor"]].append(entry)
+        if entry["category"] in organized_entries.keys() and entry["flavor"] in organized_entries[entry["category"] ].keys():
+            organized_entries[entry["category"]][entry["flavor"]].append(entry)
 
     template_loader = jinja2.FileSystemLoader(searchpath="./nanopage/templates")
     template_env = jinja2.Environment(loader=template_loader)
