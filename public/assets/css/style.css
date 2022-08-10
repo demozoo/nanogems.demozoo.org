@@ -238,7 +238,7 @@
   .category-table-list li:hover {
     padding: 0.8em 0;
     background: #171717;
-    color:rgb(87, 204, 248);
+    color:#57ccf8;
     border:0px;
     min-height: 20em;
     max-height: 20em;
@@ -320,5 +320,29 @@ a.button-secondary {
   font-family: Bebas;
   letter-spacing: 50px;
 
+}
+.entry-container {
+  position: relative;
+  text-align: center;
+}
+.tags {
+  position: absolute;
+  top: 8px;
+  left: 50px;
+  background-color: #111111EE;
+  transition: left .25s;
+}
+.category-table-list li:hover  .tags {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  background-color: #111111EE;
+}
+.tag0 {
+  color: #F76F8E;
+}
+
+.tag1 {
+  color: #F9BAC9;
 }
 

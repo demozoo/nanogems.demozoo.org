@@ -34,6 +34,16 @@ CATEGORIES = [
     {"id": "tiny_executable_graphics", "label": "Tiny executable graphics"},
 ]
 
+DISPLAY_TAGS = [
+    "textmode",
+    "header-excluded",
+    "tiny-intro-with-sound",
+    "code-challenge",
+    "checkerboard",
+    "glitch",
+    "xor-pattern",
+]
+
 
 def get_entry_dir_path(category: str, flavor: str) -> Path:
     return BASE_DATA_PATH / Path(category) / Path(flavor)

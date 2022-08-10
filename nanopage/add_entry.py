@@ -33,6 +33,7 @@ def data_from_demozoo(pid: str) -> dict:
         "url": data["demozoo_url"],
         "download_link": download_link or None,
         "other_links": data["external_links"],
+        "tags": data["tags"],
     }
 
 
@@ -47,3 +48,13 @@ def add_entry(category: str, flavor: str, demozoo_id: str):
     filename = f'{data["id"]}_{slugify(data["title"])}.json'
     filepath = path / Path(filename)
     json.dump(data, codecs.open(filepath, "w", "UTF-8"))
+
+
+def __update():
+    import glob
+
+    for g in glob.glob("public/data/**/**/*"):
+        _, category, flavor, id = g.split(".")[0].split("\\")
+        id = id.split("_")[0]
+        if category not in ["tweet"]:
+            add_entry(category, flavor, id)

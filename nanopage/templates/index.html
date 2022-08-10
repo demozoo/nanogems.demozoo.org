@@ -68,11 +68,17 @@
                     <ul class="category-table-list">
                         {% for entry in organized_entries[category.id][flavor.id]|sort(attribute='release_date',reverse = True)%}
                         <li> 
-                            
-                            <a target="_blank" href="{{entry.url}}"> <img  loading="lazy" src="./img/thumbnails/{{entry.thumbnail_website}}"/></a>
+                            <div class="entry-container"><a target="_blank" href="{{entry.url}}"><img  loading="lazy" src="./img/thumbnails/{{entry.thumbnail_website}}"/>
+                                <div class="tags">
+                                    {% for tag in entry.tags%}
+                                         <span class="tag tag{{loop.index0%2}}">#{{tag}} </span> 
+                                    {% endfor %}
+                                </div></a>
+                            </div>
                             <p class="entry-label"> <a target="_blank" href="{{entry.url}}"> {{entry.title}} by {{entry.authors}} <br/>
-                            ({{entry.platforms}} - {{entry.release_date[0:4]}}) 
+                            ({{entry.platforms}} - {{entry.release_date[0:4]}})  
                             </a>
+                            
                         </li>
                         {% endfor %}
                     </ul>

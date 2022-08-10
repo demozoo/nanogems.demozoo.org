@@ -2,7 +2,7 @@ import argparse
 import config
 
 from add_entry import add_entry
-from generate import generate_html
+from generate import freezer
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="nanopage")
@@ -28,4 +28,4 @@ if __name__ == "__main__":
     if args.command == "add_entry":
         add_entry(args.category, args.flavor, args.demozoo_id)
     elif args.command == "generate":
-        generate_html()
+        freezer.freeze()
