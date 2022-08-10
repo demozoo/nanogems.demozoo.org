@@ -332,13 +332,15 @@ a.button-secondary {
   top: 8px;
   left: 50px;
   background-color: #111111EE;
-  transition: left .25s;
+  transition: left .25s, font-size .25s;
+  font-size: .8em;
 }
 .category-table-list li:hover  .tags {
   position: absolute;
   top: 8px;
   left: 10px;
   background-color: #111111EE;
+  font-size: 1em;
 }
 .tag0 {
   color: #F76F8E;
