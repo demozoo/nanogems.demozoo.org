@@ -330,7 +330,7 @@ a.button-secondary {
 .tags {
   position: absolute;
   top: 8px;
-  left: 50px;
+  left: 70px;
   background-color: #111111EE;
   transition: left .25s, font-size .25s;
   font-size: .8em;
