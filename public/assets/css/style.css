@@ -126,6 +126,7 @@
     text-align: center;
    
     font-weight: lighter;
+    z-index: 10;
   }
    .banner-mini {
     scroll-margin-top: 50px;
@@ -140,6 +141,7 @@
     width: 80%;
     margin-bottom: 2em;
     display: table;
+    z-index: 10;
   }
    .banner-mini-head {
     display: table-cell;
