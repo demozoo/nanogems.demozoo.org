@@ -42,6 +42,23 @@ DISPLAY_TAGS = [
     "checkerboard",
     "glitch",
     "xor-pattern",
+    "fractal",
+    "floorcast",
+    "tunnel",
+    "raycasting",
+    "raymarching",
+    "checkerboard",
+    "sierpinski",
+    "automata",
+    "fire-effect",
+    "matrix-effect",
+    "xor-pattern",
+    "twister",
+    "noise",
+    "rotozoomer",
+    "vectors",
+    "midi",
+    "bytebeat",
 ]
 
 
