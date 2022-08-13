@@ -47,6 +47,7 @@ DISPLAY_TAGS = [
     "tunnel",
     "raycasting",
     "raymarching",
+    "raytracing",
     "checkerboard",
     "sierpinski",
     "automata",
@@ -59,6 +60,9 @@ DISPLAY_TAGS = [
     "vectors",
     "midi",
     "bytebeat",
+    "plasma",
+    "sine-dots",
+    "metaballs"
 ]
 
 
