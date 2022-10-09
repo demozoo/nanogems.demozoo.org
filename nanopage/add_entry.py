@@ -54,8 +54,7 @@ def __update():
     import glob
     for g in glob.glob("public/data/**/**/*"):
         print(g)
-        f = open(g)
-        data = json.load(f)
-        f.close()
-        if 'demozoo' in data["url"]:
-            add_entry(data["category"], data["flavor"], data["id"])
+        with codecs.open(g,'r','UTF-8') as f:
+            data = json.load(f)
+            if 'demozoo' in data["url"]:
+                add_entry(data["category"], data["flavor"], data["id"])
