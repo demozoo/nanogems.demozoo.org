@@ -35,6 +35,7 @@ CATEGORIES = [
 ]
 
 DISPLAY_TAGS = [
+    "meteoriks-watchlist-2021",
     "textmode",
     "header-excluded",
     "tiny-intro-with-sound",

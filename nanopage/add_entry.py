@@ -56,5 +56,3 @@ def __update():
     for g in glob.glob("public/data/**/**/*"):
         _, category, flavor, id = g.split(".")[0].split("\\")
         id = id.split("_")[0]
-        if category not in ["tweet"]:
-            add_entry(category, flavor, id)
