@@ -3,7 +3,7 @@ import json
 import re
 import config
 import codecs
-from pathlib import Path, PurePath
+from pathlib import Path
 
 
 def slugify(text: str) -> str:
