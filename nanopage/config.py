@@ -35,16 +35,15 @@ CATEGORIES = [
 ]
 
 DISPLAY_TAGS = [
-    "meteoriks-watchlist-2021",
     "textmode",
     "header-excluded",
     "tiny-intro-with-sound",
     "code-challenge",
-    "checkerboard",
+    "chessboard",
     "glitch",
     "xor-pattern",
     "fractal",
-    "floorcast",
+    "floorcasting",
     "tunnel",
     "raycasting",
     "raymarching",

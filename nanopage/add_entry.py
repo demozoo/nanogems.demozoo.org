@@ -52,7 +52,10 @@ def add_entry(category: str, flavor: str, demozoo_id: str):
 
 def __update():
     import glob
-
     for g in glob.glob("public/data/**/**/*"):
-        _, category, flavor, id = g.split(".")[0].split("\\")
-        id = id.split("_")[0]
+        print(g)
+        f = open(g)
+        data = json.load(f)
+        f.close()
+        if 'demozoo' in data["url"]:
+            add_entry(data["category"], data["flavor"], data["id"])
