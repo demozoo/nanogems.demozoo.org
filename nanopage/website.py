@@ -27,15 +27,16 @@ def _fetch_thumbnail(entries: list) -> dict:
     return entries
 
 
-def _fetch_entries() -> list:
+def _fetch_entries(is_archive:bool=False) -> list:
     """
     Get all entries
     """
-    if entries := g.get("_entries"):
-        return entries
+    glob_target = f"{config.BASE_DATA_PATH}/**/**/*.json"
+    if is_archive:
+        glob_target = f"{config.BASE_DATA_PATH}/**/**/archive/*.json"
     entries = [
         json.load(codecs.open(file, "r", "UTF-8"))
-        for file in glob.glob(f"{config.BASE_DATA_PATH}/**/**/*")
+        for file in glob.glob(glob_target)
     ]
     entries.sort(key=lambda a: a["release_date"], reverse=True)
     g._entries = entries
@@ -62,6 +63,8 @@ def _get_organized_entries(entries: list) -> None:
 
 
 def _get_og_entries(entries):
+    if not entries:
+        return []
     return entries[:5]
 
 
@@ -99,9 +102,22 @@ def index():
     )
 
 
-@app.route("/entry/<id>.html")
-def entry(id):
+@app.route("/archive.html")
+def archive():
     """
     Main function to generate the page
     """
-    return minify_html.minify(render_template("entry.html"))
+
+    entries = _fetch_entries(True)
+    entries = _fetch_thumbnail(entries)
+    entries = _filter_tag_from_entry(entries)
+    organized_entries = _get_organized_entries(entries)
+    og_entries = _get_og_entries(entries)
+    return minify_html.minify(
+        render_template(
+            "archive.html",
+            organized_entries=organized_entries,
+            config=config,
+            og_entries=og_entries,
+        )
+    )

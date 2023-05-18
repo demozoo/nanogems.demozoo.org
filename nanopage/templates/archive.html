@@ -15,10 +15,12 @@
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:site" content="@nanogems" />
-    <meta name="twitter:title" content="Nano Gems" />
-    <meta property="og:url" content="https://nanogems.demozoo.org/" />
-    <meta name="twitter:description" content="A curated selection of the best tiny intros from the demoscene" />
-    <meta name="twitter:image" content="https://nanogems.demozoo.org/img/thumbnails/{{og_entries[0].thumbnail_website}}" />
+    <meta name="twitter:title" content="Archive of Nano Gems" />
+    <meta property="og:url" content="https://nanogems.demozoo.org/archive" />
+    <meta name="twitter:description" content="A curated selection of the best tiny intros from the demoscene" /
+    {% if og_entries %}
+        <meta name="twitter:image" content="https://nanogems.demozoo.org/img/thumbnails/{{og_entries[0].thumbnail_website}}" />
+    {% endif %}
 </head>
 <body>
 
@@ -31,9 +33,9 @@
 
 <div id="top" class="banner">
     <h1  class="banner-head">
-        NANO GEMS 
+       Archive of NANO GEMS 
     </h1>
-    <h2 class="banner-head">A curated selection of the best Tiny Intros from the Demoscene</h2>
+    <h2 class="banner-head">Former gems to unearth even more gems </h2>
     
 </div>
 <div id="nav" class=" l-box pure-g center sticky">
@@ -44,7 +46,7 @@
         <a class="button-secondary pure-button " href="#{{category.id}}">{{category.label}}</a>
         
         {%  endfor %}
-        <a class="button-secondary pure-button" href="{{url_for('archive')}}">Archive</a>
+        <a class="button-secondary pure-button" href="{{url_for('index')}}">Main</a>
         <a class="button-secondary pure-button" href="#about">About</a>
         
     </div>
@@ -52,6 +54,7 @@
 <div class="l-content">
     
     {% for category in config.CATEGORIES %}
+    
     <label id="{{category.id}}"></label>
     <div  class="sticky banner-mini">
         <h1 class="banner-mini-head">
@@ -86,7 +89,7 @@
     
                    
                 </div>
-            </div>
+            </div> 
             {% endfor %}
         </div>
         
